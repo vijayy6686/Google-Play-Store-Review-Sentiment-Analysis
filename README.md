@@ -1,58 +1,46 @@
 # 📱 Google Play Store Review Sentiment Analysis
 
-🌟 Multiclass Sentiment Analysis Web Application
+🌟 Sentiment Analysis Web Application
 
 📖 Project Overview
 
-The Google Play Store Review Sentiment Analysis project is an end-to-end machine learning web application that classifies user reviews into Positive, Negative, or Neutral sentiments using Natural Language Processing (NLP) techniques.
+The Google Play Store Review Sentiment Analysis project is an end-to-end machine learning web application that classifies user reviews into Positive, Neutral, or Negative sentiments using Natural Language Processing (NLP).
 
-This project demonstrates the complete lifecycle of a text-based machine learning system, including data preprocessing, feature extraction, model training, evaluation, and deployment through an interactive web interface.
+The project demonstrates the complete lifecycle of a text-based ML system — from preprocessing and feature extraction to model training and deployment via an interactive web interface.
 
-Users can input real Google Play Store–style reviews and receive instant sentiment predictions. The application emphasizes clean ML engineering practices, transparent modeling, and realistic evaluation, avoiding exaggerated performance claims.
+Users can input real Google Play Store–style reviews and receive instant sentiment predictions. The focus is on clean ML engineering practices, transparent modeling, and realistic evaluation, not exaggerated metrics.
 
 📊 Dataset Information
 
-Real-world Google Play Store user reviews
+The dataset consists of real-world Google Play Store user reviews labeled by sentiment.
+It reflects authentic user feedback with diverse writing styles, vocabulary, and emotional expressions.
 
-Labeled with three sentiment classes
+The dataset is suitable for a supervised multiclass text classification problem.
 
-Reflects authentic user feedback containing:
-
-Informal language
-
-Typos and abbreviations
-
-Short, unstructured sentences
-
-Includes neutral opinions alongside positive and negative feedback
-
-Problem Type: Supervised Multiclass Text Classification
-
-🔹 Key Dataset Characteristics
+🔹 Key Features
 
 Raw user review text
 
-Noisy, real-world linguistic patterns
+Informal language, typos, and short sentences
 
-Multiclass sentiment labels
-
-Suitable for NLP-based sentiment analysis
+Presence of positive, neutral, and negative sentiments
 
 🎯 Target Variable
 
 Sentiment Label
 
-Label	Meaning
-Positive	Favorable user sentiment
-Neutral	Mixed or informational sentiment
-Negative	Unfavorable user sentiment
+Positive
+
+Neutral
+
+Negative
 
 Objective:
-Accurately classify unseen reviews into one of the three sentiment categories based on learned textual patterns.
+Accurately classify unseen reviews based on learned textual patterns.
 
 🧠 Methodology
 
-The project follows a supervised multiclass machine learning approach using NLP techniques.
+The project follows a supervised machine learning approach using NLP techniques.
 
 🔸 Text Preprocessing
 
@@ -64,15 +52,15 @@ Stopword removal
 
 Whitespace normalization
 
-Identical preprocessing during training and inference
+Consistent preprocessing during both training and inference
 
 🔸 Feature Extraction
 
 TF-IDF (Term Frequency–Inverse Document Frequency)
 
-Converts raw text into numerical feature vectors
+Converts text into numerical vectors
 
-Captures word importance across the entire corpus
+Preserves important word-importance patterns
 
 🔸 Model Training
 
@@ -80,122 +68,86 @@ Logistic Regression (Multiclass Classification) using scikit-learn
 
 Trained on TF-IDF features
 
-Uses a one-vs-rest (OvR) or multinomial strategy (solver-dependent)
-
-Evaluated using:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score (macro and weighted)
+Evaluated using accuracy, precision, recall, and F1-score
 
 🔸 Model Persistence
 
-TF-IDF vectorizer and Logistic Regression model saved together as a single pipeline using joblib
+TF-IDF vectorizer and Logistic Regression model saved together using joblib
 
-Ensures:
+Ensures consistent preprocessing and predictions during deployment
 
-Consistent preprocessing during inference
+Eliminates the need for retraining at runtime
 
-No retraining at runtime
+🖥️ Implementation
 
-Reproducibility and maintainability
-
-🖥️ Web Application Implementation
-
-The application is implemented using Streamlit, providing a clean and interactive user interface.
+The application is implemented using Streamlit, providing an interactive and user-friendly web interface.
 
 🔹 Implementation Highlights
 
-Text input for user reviews
+Clean text input for user reviews
 
 Real-time sentiment prediction on button click
 
-Probability-based output for each sentiment class
+Probability-based prediction output
 
 Minimal dark-themed UI using embedded HTML & CSS
 
-Direct inference using the trained ML pipeline
+Direct integration with the trained ML pipeline for inference
 
-Backend strictly performs sentiment classification without fabricated emotional scores or explanations
+The backend strictly performs sentiment classification without fabricated explanations or artificial emotional metrics.
 
 📂 Repository Structure
 google-play-store-review-sentiment-analysis/
-│
 ├── app.py
-│   ├── Streamlit web application
-│   ├── Handles user input
-│   ├── Loads trained ML pipeline
-│   └── Performs real-time multiclass sentiment prediction
-│
+│   └── Streamlit web application
 ├── reviews_pipeline.pkl
 │   └── Serialized TF-IDF + Logistic Regression pipeline
-│
 ├── requirements.txt
 │   └── Python dependencies
-│
 ├── README.md
 │   └── Project documentation
-│
 └── .gitignore
     └── Excludes virtual environments and cache files
 
+
+This structure is minimal, clean, and deployment-ready.
+
 🛠️ Tech Stack
-🔹 Programming Language
+
+Programming Language
 
 Python 3.9+
 
-🔹 Machine Learning & NLP
+Machine Learning & NLP
 
-scikit-learn
+scikit-learn (TF-IDF, Logistic Regression, Pipelines)
 
-TF-IDF
+joblib
 
-Logistic Regression (Multiclass)
-
-Pipelines
-
-joblib – model serialization
-
-🔹 Data Processing
+Data Processing
 
 pandas
 
-🔹 Web Application
+Web Application
 
 Streamlit
 
-🔹 Frontend Styling
+Frontend Styling
 
-Embedded HTML & CSS (custom dark UI)
+HTML & CSS
 
-🔹 Deployment (Optional)
+Deployment (Optional)
 
 Streamlit Community Cloud
 
-# Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate   # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the Streamlit app
-streamlit run app.py
-
 ✅ Conclusion
 
-This project demonstrates a real-world multiclass NLP sentiment analysis workflow, emphasizing:
+The Google Play Store Review Sentiment Analysis project demonstrates a complete NLP-based machine learning workflow, emphasizing:
 
-Consistent and correct text preprocessing
+Correct text preprocessing
 
-TF-IDF–based feature engineering
+Pipeline-based modeling
 
-Multiclass Logistic Regression modeling
+Responsible evaluation
 
-Responsible evaluation practices
-
-Clean and reliable Streamlit deployment
+Clean and reliable deployment
