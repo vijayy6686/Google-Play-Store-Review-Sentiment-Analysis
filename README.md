@@ -114,29 +114,29 @@ This structure is minimal, clean, and deployment-ready.
 
 🛠️ Tech Stack
 
-Programming Language
+🔹 Programming Language
 
 Python 3.9+
 
-Machine Learning & NLP
+🔹 Machine Learning & NLP
 
 scikit-learn (TF-IDF, Logistic Regression, Pipelines)
 
 joblib
 
-Data Processing
+🔹 Data Processing
 
-pandas
+pandas – dataset handling and preprocessing
 
-Web Application
+🔹 Web Application
 
 Streamlit
 
-Frontend Styling
+🔹 Frontend Styling
 
 HTML & CSS
 
-Deployment (Optional)
+🔹 Deployment (Optional)
 
 Streamlit Community Cloud
 
