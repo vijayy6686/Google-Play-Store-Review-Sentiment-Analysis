@@ -176,11 +176,6 @@ Embedded HTML & CSS (custom dark UI)
 
 Streamlit Community Cloud
 
-▶️ Running the Application Locally
-# Clone the repository
-git clone https://github.com/your-username/google-play-store-review-sentiment-analysis.git
-cd google-play-store-review-sentiment-analysis
-
 # Create and activate virtual environment
 python -m venv venv
 venv\Scripts\activate   # Windows
