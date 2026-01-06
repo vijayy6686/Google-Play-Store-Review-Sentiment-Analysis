@@ -6,7 +6,7 @@ import time
 # Page config
 # ===============================
 st.set_page_config(
-    page_title="Google Play Store Sentiment Analysis",
+    page_title="Google Play Store App Reviews Sentiment Analysis",
     page_icon="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -190,3 +190,4 @@ with right:
             st.markdown(f"<div class='confidence'>{confidence:.1f}%</div>", unsafe_allow_html=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
+
