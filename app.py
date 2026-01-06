@@ -137,7 +137,7 @@ st.markdown("""
 <div class="hero">
     <img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" height="48">
     <div class="hero-title">Sentiment Analysis</div>
-    <div class="hero-sub">Analyze Google Play Store reviews</div>
+    <div class="hero-sub">Analyze Google Play Store App reviews</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -190,4 +190,5 @@ with right:
             st.markdown(f"<div class='confidence'>{confidence:.1f}%</div>", unsafe_allow_html=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
+
 
