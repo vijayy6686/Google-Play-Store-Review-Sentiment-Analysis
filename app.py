@@ -156,7 +156,7 @@ with left:
     review_text = st.text_area(
         "User Review",
         height=160,
-        placeholder="Type your Google Play review here...",
+        placeholder="Type your App review here...",
         label_visibility="collapsed"
     )
 
@@ -190,5 +190,6 @@ with right:
             st.markdown(f"<div class='confidence'>{confidence:.1f}%</div>", unsafe_allow_html=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
+
 
 
